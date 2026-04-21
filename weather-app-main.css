@@ -1,0 +1,219 @@
+.main{
+    grid-area: main;
+    flex-direction: column;
+    width: 98%;
+    height: 95%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7vh;
+    
+}
+.time{
+    grid-area: time;
+   
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+}
+.box{
+    width: 98%;
+    height: 32%;
+    background-color: var(--sub-bg);
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background: rgba(255, 255, 255, 0.1); /* transparency */
+    backdrop-filter: blur(10px);          /* blur behind */
+    -webkit-backdrop-filter: blur(10px);  /* Safari support */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+.container{
+    width: 97%;
+    height: 95%;
+    background-color: var(--sub-bg);
+    margin-right: clamp(5px, 1vw, 10px);
+    backdrop-filter: blur(10px);          /* blur behind */
+    -webkit-backdrop-filter: blur(10px);  /* Safari support */
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("clock.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: center;
+}
+
+.change-city-box{
+    position: absolute;
+    width: 25%;
+    height: minmax(75%, auto);
+    background-color: var(--box-color);
+    z-index: 18;
+    border-radius: 20px 25px 15px 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -170%);
+    box-shadow: 1px 2px 2px var(--shadow-color);
+    min-width: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:  1em;
+    display: flex;
+    opacity: 1;
+    gap: 2.5vh;
+    opacity: 0;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-align: center;
+}
+.change-city-box h1{
+    font-family: var(--body-font);
+    color: var(--sub-bg);
+    text-shadow: 1px 2px 2px var(--shadow-color);
+    font-size: clamp(1rem, 2vw, 1.6rem);
+}
+.time-text{
+    font-size: clamp(3rem, 10vw, 4.2rem);
+    font-family: var(--body-font);
+    text-shadow: 2px 3px 3px var(--shadow-color);
+    color: var(--white-text);
+    margin-left: 1vw;
+    
+}
+#infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+#city, #weather-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box p{
+    font-family: var(--body-font);
+    color: var(--white-text);
+    text-shadow: 2px 3px 3px var(--shadow-color);
+}
+#city.manila{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("manila.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: center;
+    border: none;
+}
+#city.baguio{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("baguio.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: bottom;
+    border: none;
+}
+#city.cebu{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("cebu.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: bottom;
+    border: none;
+}
+#city.davao{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("davao.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: top;
+    border: none;
+}
+#city.muntinlupa{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("muntinlupa.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: bottom;
+    border: none;
+}
+
+#weather-main.Thunderstorm{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("thunderstorm.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: center;
+    border: none;
+}
+#weather-main.Drizzle{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("drizzle.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: bottom;
+    border: none;
+}
+#weather-main.Rain{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("rain.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: bottom;
+    border: none;
+}
+#weather-main.Snow{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("snow.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: top;
+    border: none;
+}
+#weather-main.Atmosphere{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("atmos.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: bottom;
+    border: none;
+}
+#weather-main.Clear{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("clear.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: top;
+    border: none;
+}
+#weather-main.Clouds{
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("cloudy.jpg");
+    background-size: cover;
+    box-shadow: 3px 4px 4px var(--shadow-color);
+    background-position: top;
+    border: none;
+}
+

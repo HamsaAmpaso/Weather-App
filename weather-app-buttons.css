@@ -1,0 +1,114 @@
+.buttons-container svg{
+    height: 34px;
+    width: 34px;
+    fill: var(--svg-fill-color);
+}
+.btn{
+    display: flex;
+    box-shadow: 2px 3px 3px var(--shadow-color);
+    background: rgba(255, 255, 255, 0.1); /* transparency */
+    backdrop-filter: blur(10px);          /* blur behind */
+    -webkit-backdrop-filter: blur(10p);
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 7%;
+    width: 80%;
+    border-radius: 8px;
+    transition: background-color 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), transform0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+}
+#darkmode{
+    margin-top: 2vh;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+}
+.btn::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: white;
+    color: var(--black-text);
+    padding: 0.5em 1em;
+    border-radius:50px ;
+    white-space: nowrap;
+    font-size: clamp(0.5rem, 2vw, 0.7rem);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 1px 2px 2px var(--aside-box-shadow);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btn:hover::before{
+    opacity: 0.7;
+    transform: translateX(73%);
+}
+
+#change-city:hover::before{
+    transform: translateX(80%);
+}
+
+.dropdown{
+    width: 95%;
+    display: contents;
+}
+.dropdown input{
+    
+    width: 95%;
+    padding: 1em;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 2px 3px 3px var(--shadow-color);
+
+}
+#cancel{
+    background-color: white;
+    color: var(--black-text);
+}
+.btn2{
+     width: 95%;
+    padding: 1em;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 2px 3px 3px var(--shadow-color);
+    background-color: var(--sub-bg);
+    color: var(--white-text);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+
+}
+#change:hover{
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+    color: var(--white-text);
+}
+#cancel:hover{
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+    color: var(--white-text);
+}
+.list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  list-style: none;
+  display: none;
+  border-radius: 8px;
+ 
+}
+
+.list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.list li:hover {
+  background: lightgray;
+}
