@@ -32,6 +32,7 @@
 
     const weather_pic_text = document.querySelector(".weather-main-text");
     const description_text = document.querySelector(".description-text");
+    const description_icon = document.querySelector(".description-img");
     const humidity_text = document.querySelector(".humidity-text");
     const temp_text = document.querySelector(".temp-text");
     const wind_text = document.querySelector(".wind-speed-text");
@@ -185,8 +186,11 @@ weather_pic_text.textContent= main + " Sky";
 const description = data.weather[0].description;
 console.log(description);
 const humidity = data.main.humidity;
+const description_icon_text = data.weather[0].icon;
+const description_icon_url = `https://openweathermap.org/img/wn/${description_icon_text}@2x.png`;
 
-description_text.textContent= `Description: ${description}`;
+description_text.textContent= description;
+description_icon.src = description_icon_url;
 humidity_text.textContent = `Humidity: ${humidity}`;
 
 const temp = data.main.temp;
