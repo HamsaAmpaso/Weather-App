@@ -1,0 +1,26 @@
+{
+  "name": "weather-app",
+  "version": "1.0.1",
+  "description": "a weather app using open weather api",
+  "keywords": [
+    "none"
+  ],
+  "homepage": "https://github.com/HamsaAmpaso/Weather-App#readme",
+  "bugs": {
+    "url": "https://github.com/HamsaAmpaso/Weather-App/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HamsaAmpaso/Weather-App.git"
+  },
+  "license": "MIT",
+  "author": "hamsa ampaso",
+  "type": "module",
+  "main": "weather-app.js",
+  "scripts": {
+    "test": "node weather-app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

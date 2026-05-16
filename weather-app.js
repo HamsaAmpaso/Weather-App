@@ -1,3 +1,4 @@
+import {api_key} from './api_key.js';
 (()=>{
     if(!localStorage.getItem("city")){
         localStorage.setItem("city", "Manila");
@@ -37,8 +38,8 @@
     const temp_text = document.querySelector(".temp-text");
     const wind_text = document.querySelector(".wind-speed-text");
    
-
-    const API_KEY = "216e6272ee754da5d983db858bbac57a";
+    
+    const API_KEY = api_key;
 
     function showList(items) {
       list.innerHTML = "";
